@@ -16,7 +16,6 @@ def bubble_sort(ls):
   return ls
 
 # 示例
-# 示例
 list1 = [10, 23, 6, 8, 2, 16, 0, 9]
 print(bubble_sort(list1))
 # 输出结果为 [0, 2, 6, 8, 9, 10, 16, 23]
