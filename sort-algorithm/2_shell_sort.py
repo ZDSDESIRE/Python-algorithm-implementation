@@ -17,8 +17,8 @@
 '''
 
 # 3、代码实现
-def shell_sort(ls):
-  count = len(ls)
+def shell_sort(arr):
+  count = len(arr)
   step = 2
   gap = count // step  # Python2.2开始，"/"表示除法, 结果可能为浮点数，而"//"表示整除，结果不计小数部分，直接为整数
   while gap > 0:
@@ -26,16 +26,16 @@ def shell_sort(ls):
       j = i + gap
       while j < count:
         k = j - gap
-        key = ls[j]
+        temp = arr[j]
         while k >= 0:
-          if ls[k] > key:
-            ls[k + gap] = ls[k]
-            ls[k] = key
+          if arr[k] > temp:
+            arr[k + gap] = arr[k]
+            arr[k] = temp
           k -= gap
         j += gap
     gap //= step
-  return ls
+  return arr
 
 # 4、示例
-list1 = [10, 23, 6, 8, 2, 16, 0, 9]
-print(shell_sort(list1))  # 输出结果为 [0, 2, 6, 8, 9, 10, 16, 23]
+arr = [10, 23, 6, 8, 2, 16, 0, 9]
+print(shell_sort(arr))  # 输出结果为 [0, 2, 6, 8, 9, 10, 16, 23]
