@@ -18,18 +18,18 @@
 '''
 
 # 3、代码实现
-def select_sort(ls):
-  count = len(ls)
+def select_sort(arr):
+  count = len(arr)
   for i in range(0, count):
     min = i  # 记最小数的索引
     for j in range(i + 1, count):
-      if ls[min] > ls[j]:
+      if arr[min] > arr[j]:
         min = j
-    # 若 ls[i] 不是最小数，将 ls[i] 和最小数进行交换
+    # 若 arr[i] 不是最小数，将 arr[i] 和最小数进行交换
     if i != min:
-      ls[min], ls[i] = ls[i], ls[min]
-  return ls
+      arr[min], arr[i] = arr[i], arr[min]
+  return arr
 
 # 4、示例
-list1 = [10, 23, 6, 8, 2, 16, 0, 9]
-print(select_sort(list1))  # 输出结果为 [0, 2, 6, 8, 9, 10, 16, 23]
+arr = [10, 23, 6, 8, 2, 16, 0, 9]
+print(select_sort(arr))  # 输出结果为 [0, 2, 6, 8, 9, 10, 16, 23]
