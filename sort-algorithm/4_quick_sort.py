@@ -42,5 +42,5 @@ def q_partition(arr, left, right):
   return left
 
 # 4、示例
-list1 = [10, 23, 6, 8, 2, 16, 0, 9]
-print(quick_sort(list1))  # 输出结果为 [0, 2, 6, 8, 9, 10, 16, 23]
+arr = [10, 23, 6, 8, 2, 16, 0, 9]
+print(quick_sort(arr))  # 输出结果为 [0, 2, 6, 8, 9, 10, 16, 23]
