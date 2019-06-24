@@ -18,14 +18,14 @@
 '''
 
 # 3、代码实现
-def bubble_sort(ls):
-  count = len(ls)
+def bubble_sort(arr):
+  count = len(arr)
   for i in range(0, count):
     for j in range(i + 1, count):
-      if ls[i] > ls[j]:
-        ls[i], ls[j] = ls[j], ls[i]
-  return ls
+      if arr[i] > arr[j]:
+        arr[i], arr[j] = arr[j], arr[i]
+  return arr
 
 # 4、示例
-list1 = [10, 23, 6, 8, 2, 16, 0, 9]
-print(bubble_sort(list1))  # 输出结果为 [0, 2, 6, 8, 9, 10, 16, 23]
+arr = [10, 23, 6, 8, 2, 16, 0, 9]
+print(bubble_sort(arr))  # 输出结果为 [0, 2, 6, 8, 9, 10, 16, 23]
