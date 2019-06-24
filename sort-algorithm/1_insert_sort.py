@@ -19,18 +19,18 @@
 '''
 
 # 3、代码实现
-def insert_sort(ls):
-  count = len(ls)
+def insert_sort(arr):
+  count = len(arr)
   for i in range(1, count):
-    key = ls[i]
+    temp = arr[i]
     j = i - 1
     while j >= 0:
-      if ls[j] > key:
-        ls[j + 1] = ls[j]
-        ls[j] = key
+      if arr[j] > temp:
+        arr[j + 1] = arr[j]
+        arr[j] = temp
       j -= 1
-  return ls
+  return arr
 
 # 4、示例
-list1 = [10, 23, 6, 8, 2, 16, 0, 9]
-print(insert_sort(list1))  # 输出结果为 [0, 2, 6, 8, 9, 10, 16, 23]
+arr = [10, 23, 6, 8, 2, 16, 0, 9]
+print(insert_sort(arr))  # 输出结果为 [0, 2, 6, 8, 9, 10, 16, 23]
