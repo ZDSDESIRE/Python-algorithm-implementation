@@ -21,11 +21,13 @@
 def select_sort(ls):
   count = len(ls)
   for i in range(0, count):
-    min = i
+    min = i  # 记最小数的索引
     for j in range(i + 1, count):
       if ls[min] > ls[j]:
         min = j
-    ls[min], ls[i] = ls[i], ls[min]
+    # 若 ls[i] 不是最小数，将 ls[i] 和最小数进行交换
+    if i != min:
+      ls[min], ls[i] = ls[i], ls[min]
   return ls
 
 # 4、示例
