@@ -19,26 +19,26 @@
 '''
 
 # 3、代码实现
-def quick_sort(ls):
-  return q_sort(ls, 0, len(ls) - 1)  # 返回待排序列最小下标值 left 和最大下标值 right
+def quick_sort(arr):
+  return q_sort(arr, 0, len(arr) - 1)  # 返回待排序列最小下标值 left 和最大下标值 right
 
-def q_sort(ls, left, right):
+def q_sort(arr, left, right):
   if left < right:
-    pivot = q_partition(ls, left, right)  # 获取待排序列一个分组标准，并对其进行分组
-    q_sort(ls, left, pivot - 1)
-    q_sort(ls, pivot + 1, right)
-  return ls
+    pivot = q_partition(arr, left, right)  # 获取待排序列一个分组标准，并对其进行分组
+    q_sort(arr, left, pivot - 1)
+    q_sort(arr, pivot + 1, right)
+  return arr
 
-def q_partition(ls, left, right):
-  pivotkey = ls[left]
+def q_partition(arr, left, right):
+  pivot = left
   while left < right:
-      while left < right and ls[right] >= pivotkey:
+      while left < right and arr[right] >= arr[pivot]:
         right -= 1
-      ls[left] = ls[right]
-      while left < right and ls[left] <= pivotkey:
+      arr[left] = arr[right]
+      while left < right and arr[left] <= arr[pivot]:
         left += 1
-      ls[right] = ls[left]
-  ls[right] = pivotkey
+      arr[right] = arr[left]
+  arr[right] = arr[pivot]
   return left
 
 # 4、示例
