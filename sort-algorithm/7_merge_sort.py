@@ -49,6 +49,28 @@ def merge_sort(arr):
     right = merge_sort(arr[num:])
     return merge(left, right)
 
+
+# def mergeSort(arr):
+#     import math
+#     if(len(arr)<2):
+#         return arr
+#     middle = math.floor(len(arr)/2)
+#     left, right = arr[0:middle], arr[middle:]
+#     return merge(mergeSort(left), mergeSort(right))
+
+# def merge(left,right):
+#     result = []
+#     while left and right:
+#         if left[0] <= right[0]:
+#             result.append(left.pop(0));
+#         else:
+#             result.append(right.pop(0));
+#     while left:
+#         result.append(left.pop(0));
+#     while right:
+#         result.append(right.pop(0));
+#     return result
+
 # 4、示例
 arr = [10, 23, 6, 8, 2, 16, 0, 9]
 print(merge_sort(arr))  # 输出结果为 [0, 2, 6, 8, 9, 10, 16, 23]
