@@ -4,7 +4,7 @@
 
 ***Sort-algorithm*&ensp;八大排序算法**
 
-*[1、insert_sort*&ensp;插入排序](sort-algorithm（排序算法）/1_insert_sort.py)
+*1、[insert_sort &ensp;插入排序](sort-algorithm/1_insert_sort.py)*
 
 * 插入排序是一种最简单直观的排序算法，它的工作原理是通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。其基本操作就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的、个数加一的有序数据，该算法适用于少量数据的排序，时间复杂度为O(n^2)。是稳定的排序方法。
 * 插入算法把要排序的数组分成两部分：第一部分包含了这个数组的所有元素，但将最后一个元素除外（让数组多一个空间才有插入的位置），而第二部分就只包含这一个元素（即待插入元素）。在第一部分排序完成后，再将这个最后元素插入到已排好序的第一部分中。
@@ -12,14 +12,13 @@
 
 ![insertionSort](img/insertionSort.gif)
 
-
-[*2、shell_sort*&ensp;希尔排序](sort-algorithm（排序算法）/2_shell_sort.py)
+*2、[shell_sort &ensp;希尔排序](sort-algorithm/2_shell_sort.py)*
 
 * 希尔排序(Shell Sort)是插入排序的一种。也称缩小增量排序，是直接插入排序算法的一种更高&效的改进版本。
 * 希尔排序是非稳定排序算法。该方法因DL．Shell于1959年提出而得名。
 * 希尔排序是把记录按下标的一定增量分组，对每组使用直接插入排序算法排序；随着增量逐渐减少，每组包含的关键词越来越多，当增量减至1时，整个文件恰被分成一组，算法便终止。
 
-[*3、bubble_sort*&ensp;冒泡排序](sort-algorithm（排序算法）/3_bubble_sort.py)
+*3、[bubble_sort &ensp;冒泡排序](sort-algorithm/3_bubble_sort.py)*
 
 * 冒泡排序（Bubble Sort）也是一种简单直观的排序算法。
 * 它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。
@@ -27,8 +26,7 @@
 
 ![bubbleSort](img/bubbleSort.gif)
 
-
-[*4、quick_sort*&ensp;快速排序](sort-algorithm（排序算法）/4_quick_sort.py)
+*4、[quick_sort &ensp;快速排序](sort-algorithm/4_quick_sort.py)*
 
 * 快速排序是由东尼·霍尔所发展的一种排序算法。
 * 快速排序使用分治法（Divide and conquer）策略来把一个串行（list）分为两个子串行（sub-lists），其是一种分而治之思想在排序算法上的典型应用。
@@ -36,8 +34,7 @@
 
 ![quickSort](img/quickSort.gif)
 
-
-[*5、select_sort*&ensp;选择排序](sort-algorithm（排序算法）/5_select_sort.py)
+*5、[select_sort &ensp;选择排序](sort-algorithm/5_select_sort.py)*
 
 * 选择排序是一种简单直观的排序算法，无论什么数据进去都是 O(n²) 的时间复杂度。所以用到它的时候，数据规模越小越好。唯一的好处可能就是不占用额外的内存空间了吧。
 * 基本思想：第1趟，在待排序记录r1 ~ r[n]中选出最小的记录，将它与r1交换；
@@ -46,8 +43,7 @@
 
 ![selectionSort](img/selectionSort.gif)
 
-
-[*6、heap_sort*&ensp;堆排序](sort-algorithm（排序算法）/6_heap_sort.py)
+*6、[heap_sort &ensp;堆排序](sort-algorithm/6_heap_sort.py)*
 
 * 堆排序(Heapsort)是指利用堆积树（堆）这种数据结构所设计的一种排序算法，它是选择排序的一种。可以利用数组的特点快速定位指定索引的元素。堆排序的平均时间复杂度为 Ο(nlogn)。
 * 堆分为大根堆和小根堆，是近似完全二叉树的结构。
@@ -58,8 +54,7 @@
   
 ![heapSort](img/heapSort.gif)
 
-
-[*7、merge_sort*&ensp;归并排序](sort-algorithm（排序算法）/7_merge_sort.py)
+*7、[merge_sort &ensp;归并排序](sort-algorithm/7_merge_sort.py)*
 
 * 归并排序（Merge sort）是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。
 * 归并排序的实现有两种方法：
@@ -72,8 +67,7 @@
 
 ![mergeSort](img/mergeSort.gif)
 
-
-[*8、radix_sort*&ensp;基数排序](sort-algorithm（排序算法）/8_radix_sort.py)
+*8、[radix_sort &ensp;基数排序](sort-algorithm/8_radix_sort.py)*
 
 * 基数排序（radix sort）是一种非比较型整数排序算法，属于“分配式排序”（distribution sort），又称“桶子法”（bucket sort或bin sort)，顾名思义，它是透过键值的部份资讯，将要排序的元素分配至某些“桶”中，藉以达到排序的作用。
 * 其原理是将整数按位数切割成不同的数字，然后按每个位数分别比较。由于整数也可以表达字符串（比如名字或日期）和特定格式的浮点数，所以基数排序也不是只能使用于整数。
@@ -81,9 +75,10 @@
 
 ![radixSort](img/radixSort.gif)
 
-
 <font color=#FF0000>注：</font>
+
 * 以上算法原理动图均取自[JS-Sorting-Algorithm（十大经典排序算法）](https://github.com/hustcc/JS-Sorting-Algorithm.git)
 * 关于算法的具体实现方法可参考对应的源码文件
+
 - - -
 ***待补充 ...***
